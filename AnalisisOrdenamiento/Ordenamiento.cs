@@ -15,22 +15,27 @@ namespace AnalisisOrdenamiento
         public const int RAM4 = 4;
         public const int RAM8 = 4;
         public const int RAM12 = 4;
+
         public int tamañoArreglo { get; set; }
         public const int GRANDE = 10000;
         public const int MEDIANO = 1000;
         public const int PEQUEÑO = 100;
 
+
         public string estadoArreglo { get; set; }
         public const string ALEATORIO = "ALEATORIO";
         public const string ASCENDENTE = "ASCENDENTE";
+
         public const string DESCENDENTE = "DESCENDENTE";
         public string algoritmoOrdenamiento { get; set; }
         public const string QUICK = "QuickSort";
         public const string BUBBLE = "BubbleSort";
         private int[] collection;
+
         private Stopwatch sw; // Creación del Stopwatch (Para medir tiempo)
 
         private TimeSpan start;
+
         private TimeSpan stop;
 
         public Ordenamiento(int[] collection, int rAM, int tamañoArreglo, string estadoArreglo,
@@ -53,14 +58,11 @@ namespace AnalisisOrdenamiento
         }
         public int[] COLLECTION
         {
-            get
-            {
+            get    {
                 return collection;
             }
-            set
-            {
+            set{
                 collection = value;
-
             }
         }
 
@@ -70,8 +72,8 @@ namespace AnalisisOrdenamiento
         public void RandomFillSmall()
         {
             Random r = new Random();
-            collection = Enumerable.Range(0, collection.Length).Select(n => n = r.Next(0, 1000)).ToArray();
 
+            collection = Enumerable.Range(0, collection.Length).Select(n => n = r.Next(0, 1000)).ToArray();
         }
 
         public void RandomFillBig()
@@ -131,17 +133,14 @@ namespace AnalisisOrdenamiento
             if (estadoArreglo.Equals(ALEATORIO))
             {
                 RandomFillSmall();
-
             }
             else if (estadoArreglo.Equals(ASCENDENTE))
             {
                 ascendenteFillSmall();
-
             }
             else
             {
                 descendenteFillSmall();
-
             }
         }
 
@@ -248,7 +247,6 @@ namespace AnalisisOrdenamiento
             set
             {
                 tamañoArreglo = value;
-
             }
         }
 
