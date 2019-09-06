@@ -11,13 +11,13 @@ namespace AnalisisOrdenamiento
         private Ordenamiento ordenamiento;
         public const int NumTratameintos = 54; 
 
-        public Experimento()
+
+
+      public Experimento()
         {
            
            
-           
-
-
+        
         }
            
     }
